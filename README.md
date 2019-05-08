@@ -14,7 +14,7 @@ to find feature subset that would not lead to the accuracy decrease, which was a
 
 Below are waterfall plot showing evolution of BSFilter layer weights during network training for Wine and Musk2 datasets.  
 
-![](./etc/Evolution_wine.svg) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ![](/home/andrey/Documents/BSFilter/src/etc/Evolution_musk.svg)
+![](https://raw.githubusercontent.com/Trel725/BSFilter/master/etc/Evolution_wine.png) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ![](https://raw.githubusercontent.com/Trel725/BSFilter/master/etc/Evolution_musk.png)
 
 ### Neuron pruning
 
