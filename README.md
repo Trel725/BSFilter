@@ -78,7 +78,7 @@ output = Dense(num_of_classes, activation='softmax')(l)
 model = Model(inp, output)
 ```
 
-##Citing
+## Citing
 
 If this layer was helpful, please cite following paper:
 
