@@ -12,9 +12,12 @@ to vanilla classifier, the coefficient needs to be lowered. On the other hand, i
 all weights of BSFilter are much higher than 0 than either coefficient needs to be increased or it is impossible
 to find feature subset that would not lead to the accuracy decrease, which was actualy observed on some datasets.
 
-Below are waterfall plot showing evolution of BSFilter layer weights during network training for Wine and Musk2 datasets.  
+Below are waterfall plot showing evolution of BSFilter layer weights during network training for Wine and Musk2 datasets.
+(https://archive.ics.uci.edu/ml/index.php)  
 
-![](https://raw.githubusercontent.com/Trel725/BSFilter/master/etc/Evolution_wine.png) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ![](https://raw.githubusercontent.com/Trel725/BSFilter/master/etc/Evolution_musk.png)
+Wine                       |  Musk2
+:-------------------------:|:-------------------------:
+![](https://raw.githubusercontent.com/Trel725/BSFilter/master/etc/Evolution_wine.png)  |  ![](https://raw.githubusercontent.com/Trel725/BSFilter/master/etc/Evolution_musk.png)
 
 ### Neuron pruning
 
