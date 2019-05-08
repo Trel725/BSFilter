@@ -18,7 +18,7 @@ class ZeroOne(Constraint):
 
     def __call__(self, w):
         w = K.clip(w, 0.0, 1.0)
-    return w
+        return w
 
 
 class BSFilter(Layer):
