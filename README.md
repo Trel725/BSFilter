@@ -1,5 +1,5 @@
 # BSFilter
-Implementation of Binary Stochastuc Filtering layer in Keras with Tensorflow backend.  
+Implementation of Binary Stochastic Filtering layer in Keras with Tensorflow backend.  
 See https://arxiv.org/abs/1902.04510 for details.
 
 ## Brief summary
