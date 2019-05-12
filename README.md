@@ -37,8 +37,7 @@ initializer: initial value of weights, 0.5 by default. Must be in range [0, 1]
 ```
 ## Examples
 
-Simple multilayer perceptron classifier with input feature filtering for selection.  
-
+Simple multilayer perceptron classifier with input feature filtering for selection. See example_classifier.py for details.
 ```python
 from keras.models import Sequential
 from keras.layers import *
@@ -77,6 +76,7 @@ l = Dense(dim, activation="relu")(l)
 output = Dense(num_of_classes, activation='softmax')(l)
 model = Model(inp, output)
 ```
+
 
 ## Citing
 
