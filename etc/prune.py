@@ -9,7 +9,7 @@ def prune(model, thresh=0.1):
     than thresh will be removed
     '''
     bs_idx = []
-    for idx, l in model.layers:
+    for idx, l in enumerate(model.layers):
         if l.__class__.__name__ == "BSFilter":
             bs_idx.append(idx)
 
