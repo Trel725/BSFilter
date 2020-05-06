@@ -2,6 +2,21 @@
 Implementation of Binary Stochastic Filtering layer in Keras with Tensorflow backend.  
 See https://arxiv.org/abs/1902.04510 for details.
 
+# BSFilter2
+An updated version rewritten in TensorFlow 2 (and tf.keras). Implements few improvements, such as 
+stabilized training and suport for weight sharing. Recommended to use.
+```
+BSFilter(regularizer=None, initializer=0.5, share_axis=None, threshold=0.1)
+
+ regularizer: regularizer to use, l1 is recommended
+ initializer: constant value to initialize the weights, not the class instance
+ share_axis: axis, along which filtering coefficients will be shared.
+             it is mainly useful e.g. to force network select same features for 
+             every channel (for that set share_axis to -1). Batch axis is not counted.
+  threshold: used at prediction phase, features with weight lower than 
+            threshold are determinstically dropped, with higher values
+            are passed
+```  
 ## Brief summary
 This layer randomly passes or drops features with probabilities, equal to its weights. If layer is penalized
 with L1 penalty, network efficiently converges to some lower number of features, while penalization
@@ -30,7 +45,7 @@ https://github.com/BenWhetton/keras-surgeon
 ## Usage
 
 ```
-class BSFilter(regularizer=None, initializer=0.5)
+BSFilter(regularizer=None, initializer=0.5)
 
 regularizer: usually keras.regularizers.l1, but any could be used.  
 initializer: initial value of weights, 0.5 by default. Must be in range [0, 1] 
