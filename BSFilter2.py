@@ -4,6 +4,7 @@ from tensorflow.keras.layers import Layer
 from tensorflow.keras import regularizers
 from tensorflow.keras.initializers import Constant
 from tensorflow.keras.constraints import Constraint
+import numpy as np
 
 
 class ZeroOne(Constraint):
@@ -50,9 +51,9 @@ class BSFilter(Layer):
 
         # else the weights will share axis
         else:
-            shape = [1] * len(input_shape)
-            shape[self.axis] = input_shape[self.axis]
-            shape = shape[1:]
+            shape = np.array(input_shape[1:])
+            shape[self.axis] = 1
+            shape = list(shape)
         self.kernel = self.add_weight(name='kernel',
                                       shape=shape,
                                       regularizer=self.regularizer,
